@@ -1,0 +1,203 @@
+
+* {
+    margin :0px;
+    font-family: Playfair Display,Roboto,sans-serif;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+}
+header::after{
+    content: "";
+    clip-path: polygon(0 0, 100% 0%, 100% 41%, 0% 100%);
+    background: #0a91b1;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+}
+.imageWrapper {
+    max-height: 245px;
+    max-width: 245px;
+    z-index: 1;
+    margin: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: 0px;
+    box-shadow: 0px 0px 3px 1px gainsboro;
+    position: relative;
+}
+.imageWrapper img{
+    object-fit: contain;
+    max-height: 245px;
+    max-width: 245px;
+    z-index: 0;
+}
+.name {
+    position: absolute;
+    bottom: 2px;
+    color: white;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+.about-me{
+    z-index: 1;
+    background: white;
+    margin-right: 38px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 3px 1px gainsboro;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.summary-title{
+    font-size:25px;
+    margin: 10px 0px;
+}
+.summary-description{
+    flex: 1;
+    font-size:16px;
+}
+
+.social-profile-links{
+    display: flex;
+    gap:5px;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.social-profile-links i{
+    cursor: pointer;
+}
+
+
+main {
+    margin: 20px;
+    margin-top: 46px;
+    flex: 1;
+}
+
+main .my-work-title{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+main .my-works{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+}
+
+main .my-works .my-work-item{ 
+    /* min-height: 100px; */
+    /* border: 1px solid black; */
+    box-shadow: 0px 0px 3px 1px gainsboro;
+    display: grid;
+}
+
+main .my-works .my-work-item > img{ 
+    max-width: 100%;
+    min-height: 200px;
+}
+
+main .my-works .my-work-item .project-details .project-header{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+main .my-works .my-work-item .project-details  .project-description{
+    padding: 5px;
+    font-size: 14px;
+}
+main .my-works .my-work-item .project-details .project-header .project-name{
+    flex: 1 ;
+    font-size: 16px;
+} 
+
+.footer-class{
+  display: flex;
+  background: #0a91b1;
+  padding:20px;
+}
+
+.footer-class  .info {
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: white;
+} 
+
+.footer-class  .info .address{
+    margin-top: 15px;
+}
+.footer-class img{
+    width: 200px;
+}
+
+.footer-class .info .social-links {
+    display: flex;
+    cursor: pointer;
+    gap: 10px;
+    padding-top: 25px;
+}
+
+@media (min-width:535px) and (max-width:768px) {
+    header {
+        display: flex;
+    }
+    .name{
+        top: 0;
+        right: -230px;
+        bottom: 0;
+    }
+    main .my-works{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width:535px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    main .my-works{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .about-me{
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .social-profile-links{
+        display: none;
+    }
+    main .my-works .my-work-item > img{ 
+        max-width: 100%;
+        height: 100%;
+    }
+    
+    .footer-class{
+        display: flex;
+        flex-direction: column;
+        background: #0a91b1;
+        padding:20px;
+    }
+
+    .footer-class img{
+        margin-top: 10px;
+        width: 100%;
+    }
+}
