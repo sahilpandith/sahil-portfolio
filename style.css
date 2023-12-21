@@ -71,6 +71,7 @@ header::after{
     gap:5px;
     justify-content: flex-end;
     padding: 10px;
+    font-size: 20px;
 }
 
 .social-profile-links i{
@@ -143,11 +144,15 @@ main .my-works .my-work-item .project-details .project-header .project-name{
     width: 200px;
 }
 
+.footer-class .info .contact-me {
+    font-size: 20px;
+}
 .footer-class .info .social-links {
     display: flex;
     cursor: pointer;
     gap: 10px;
     padding-top: 25px;
+    font-size: 60px;
 }
 
 @media (min-width:535px) and (max-width:768px) {
