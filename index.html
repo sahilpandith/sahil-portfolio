@@ -28,6 +28,19 @@
             <div class="my-work-title"> My Work</div>
             <div class="my-works">
                 <div class="my-work-item">
+                    <img src="./assets/Memory-game.png">
+                    <div class="project-details">
+                        <div class="project-header">
+                            <div class="project-name">Memory Game</div>
+                            <i class="devicon-github-original colored" onclick="openUrl('memgameGitCode')" title="git code"></i>
+                            <img src="./assets/open-in-new.svg" height="18px" width="20px" alt="open live site" title="open live site" onclick="openUrl('memgame')">
+                        </div>
+                        <div class="project-description">
+                            Click on same image twice, you lose. ready to test your memory.
+                        </div>
+                    </div>
+                </div>
+                <div class="my-work-item">
                     <img src="./assets/ToDo.png">
                     <div class="project-details">
                         <div class="project-header">
@@ -192,7 +205,9 @@
             lib:"https://sahilpandith.github.io/Library/",
             libGitCode:"https://github.com/sahilpandith/Library/",
             imgV:"https://sahilpandith.github.io/ImageViewer/",
-            imgVGitCode:"https://github.com/sahilpandith/ImageViewer"
+            imgVGitCode:"https://github.com/sahilpandith/ImageViewer",
+            memgame:"https://candid-clafoutis-d89d23.netlify.app/",
+            memgameGitCode:"https://github.com/sahilpandith/Memory-Game"
         }
         function openUrl(urlType){
             open(urls[urlType], "_blank");
